@@ -57,6 +57,10 @@ namespace gcransac
 
 			}
 
+			OLGA_INLINE void setSeed(unsigned long int seed){
+			    generator.seed(seed);
+			}
+
 			OLGA_INLINE int getRandomNumber() {
 				return generate(generator);
 			}
