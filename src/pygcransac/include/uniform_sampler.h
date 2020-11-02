@@ -48,10 +48,13 @@ namespace gcransac
 			std::unique_ptr<utils::UniformRandomGenerator<size_t>> random_generator;
 
 		public:
-			explicit UniformSampler(const cv::Mat * const container_)
+			explicit UniformSampler(const cv::Mat * const container_, const bool setSeed = false, const unsigned long int seed = 0)
 				: Sampler(container_)
 			{
 				initialized = initialize(container_);
+				if (setSeed){
+				    random_generator->setSeed(seed);
+				}
 			}
 
 			~UniformSampler() {}

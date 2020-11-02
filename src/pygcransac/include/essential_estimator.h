@@ -47,6 +47,9 @@
 #include "estimator.h"
 #include "model.h"
 
+#include "solver_essential_matrix_five_point_stewenius.h"
+
+
 namespace gcransac
 {
 	namespace estimator
